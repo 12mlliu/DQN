@@ -15,7 +15,7 @@ class config():
     record_path  = output_path + "monitor/"
 
     # model and training config
-    load_path         = "weights/model_2700000.weights"
+    #load_path         = "weights/model_2700000.weights"
     num_episodes_test = 50
     grad_clip         = True
     clip_val          = 10
@@ -34,11 +34,11 @@ class config():
     learning_freq      = 4
     state_history      = 4
     skip_frame         = 4
-    lr_begin           = 0.00008
+    lr_begin           = 0.0025#0.00008
     lr_end             = 0.00005
-    lr_nsteps          = 500000
-    eps_begin          = 0.5
+    lr_nsteps          = 1000000#500000
+    eps_begin          = 1#0.5
     eps_end            = 0.1
-    eps_nsteps         = 200000 
+    eps_nsteps         = 1000000#200000 
     learning_start     = 50000
 

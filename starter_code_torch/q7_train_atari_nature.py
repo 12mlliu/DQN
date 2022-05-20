@@ -39,7 +39,7 @@ if __name__ == '__main__':
     # learning rate schedule
     lr_schedule  = LinearSchedule(config.lr_begin, config.lr_end,
             config.lr_nsteps)
-
+    """
     # Check weights
     load_path = Path(config.load_path)
     if load_path.is_file():
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         print(f'Downloading weights...')
         subprocess.call(["wget", "-P", "weights/", "https://web.stanford.edu/class/cs234/assignments/assignment2_weights/model_2700000.weights"])
         print(f'Finished downloading weights')
-
+    """
     # train model
     model = NatureQN(env, config)
     model.run(exp_schedule, lr_schedule)

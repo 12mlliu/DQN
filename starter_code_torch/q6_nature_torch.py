@@ -51,9 +51,9 @@ class NatureQN(Linear):
         #torch.nn.Linear(in_features, out_features, bias=True, device=None, dtype=None)
         stride =4
         filter_size = 32
-        padding = ((stride - 1) * img_height - stride + filter_size) // 2
+        #padding = ((stride - 1) * img_height - stride + filter_size) // 2
         self.target_network = nn.Sequential(OrderedDict([
-          ('conv1', nn.Conv2d(n_channels*config.state_history,32,8,stride = 4,padding=padding)),
+          ('conv1', nn.Conv2d(n_channels*config.state_history,32,8,stride = 4,padding=0)),
           ('relu1', nn.ReLU()),
           ('conv2', nn.Conv2d(32,64,4,stride=2)),
           ('relu2', nn.ReLU()),
